@@ -45,18 +45,30 @@ The dataset for this project was sourced from Kaggle. It contains retail transac
 
 ---
 
-## Key Concepts
+## Understanding the Metrics
 
 ### Support
-Measures how frequently an itemset appears in the dataset.
+Support shows how frequently an itemset appears in the dataset.
+
+Example:
+If Bread and Butter appear together in 20 out of 100 transactions,
+Support = 20/100 = 0.20
 
 ### Confidence
-Measures how often items in Y appear in transactions containing X.
+Confidence measures how often item Y is purchased when item X is purchased.
+
+Example:
+If customers buying Bread also buy Butter 70% of the time,
+Confidence = 0.70
 
 ### Lift
-Measures the strength of association between two items and indicates how strongly they are related.
+Lift measures how strong the relationship is between two items.
 
----
+- Lift > 1 : Positive association
+- Lift = 1 : No association
+- Lift < 1 : Negative association
+
+  ---
 
 ## Output
 The project generates:
@@ -67,7 +79,16 @@ The project generates:
 - Insights into customer purchasing behavior
 
 ---
+## Graph Interpretation
 
+The generated graphs help visualize relationships between products and association rules.
+
+- Scatter plots were used to compare support and confidence values.
+- Bar graphs were used to display frequent itemsets.
+- Higher lift values indicate stronger product associations.
+- The visualizations help identify products commonly purchased together.
+
+---
 ## Future Improvements
 - Build an interactive dashboard
 - Deploy using Streamlit
